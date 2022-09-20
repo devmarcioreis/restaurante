@@ -10,10 +10,11 @@
     --color-white: #fff;
     --color-red: #f72936;
     --color-text: rgb(102, 102, 102);
-    --color-title: #130f40;
-    --color-btn: #f9bd41;
+    --color-blue: #130f40;
+    --color-orange: #f9bd41;
     --color-text-btn: rgba(0, 0, 0, 0.205);
     --color-background: #e44e2521;
+    --color-gradient: linear-gradient(var(--color-background), var(--color-white));
 }
 
 /*==========Reset==========*/
@@ -30,11 +31,25 @@
 /*==========Base==========*/
 body {
     font-family: var(--font-principal);
-    background: var(--color-background);
-    font-size: 62.5%;
+    background: var(--color-gradient);
+    font-size: 1rem;
     scroll-behavior: smooth;
     scroll-padding-top: 8.5rem;
-    overflow: hidden;
+}
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .7rem 1.8rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: var(--color-text-btn);
+    background: var(--color-orange);
+    border-radius: .5rem;
+    transition: all .3s ease;
+}
+.btn:hover {
+    background: #f7a707;
+    color: var(--color-white);   
 }
 
 /*==========Navbar==========*/
@@ -74,21 +89,6 @@ body {
 .home .content p i {
     color: var(--color-red);
 }
-.home .content .btn {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: .7rem 1.8rem;
-    font-size: 1.4rem;
-    cursor: pointer;
-    color: var(--color-text-btn);
-    background: var(--color-btn);
-    border-radius: .5rem;
-    transition: all .3s ease;
-}
-.home .content .btn:hover {
-    background: #f7a707;
-    color: var(--color-white);   
-}
 .home .image {
     flex: 1 1 40rem;
     margin-top: 2rem;
@@ -96,4 +96,76 @@ body {
 }
 .home .image .home-img {
     width: 65%;
+}
+
+/*==========About==========*/
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    height: 100vh;
+}
+.about .image {
+  flex: 1 1 40rem;
+  margin-left: 5rem;
+}
+.about .image img {
+    width: 70%;
+}
+.about .content {
+    flex: 1 1 40rem;
+    margin-right: 5rem;
+}
+.about .content span {
+    font-size: 3rem;
+    color: var(--color-orange);
+}
+.about .content .title {
+    font-size: 2rem;
+    padding-top: .5rem;
+    color: var(--color-blue);
+}
+.about .content p {
+    padding: 1rem 0;
+    line-height: 1;
+    color: var(--color-text);
+}
+.about .content p i {
+    font-size: 1.5rem;
+    color: var(--color-orange);
+}
+.about .content .about-btn {
+    background: var(--color-blue);
+    color: var(--color-white);
+    border-radius: 5rem;
+    transition: all .5s;
+}
+.about .content .about-btn:hover {
+    background: #130f40d3;
+}
+.about .content .icons {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.about .content .icons .icon {
+    border-radius: .5rem;
+    background: var(--color-white);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    flex: 1 1 20rem;
+    padding: 1rem;
+}
+.about .content .icons .icon i {
+    font-size: 2.5rem;
+    color: var(--color-title);
+}
+.about .content .icons .icon h3 {
+    font-size: .9rem;
+    color: var(--color-text);
+    margin-left: 1rem;
+    letter-spacing: .1rem;
 }
