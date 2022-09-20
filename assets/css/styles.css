@@ -15,6 +15,8 @@
     --color-text-btn: rgba(0, 0, 0, 0.205);
     --color-background: #e44e2521;
     --color-gradient: linear-gradient(var(--color-background), var(--color-white));
+    --color-btn-menu: #7FB77E;
+    --shadow: 0 0 1rem rgba(0, 0, 0, 0.144);
 }
 
 /*==========Reset==========*/
@@ -50,6 +52,19 @@ body {
 .btn:hover {
     background: #f7a707;
     color: var(--color-white);   
+}
+.heading {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+.heading span {
+    font-size: 3rem;
+    color: var(--color-orange);
+}
+.heading h3 {
+    font-size: 2rem;
+    color: var(--color-blue);
+    font-family: cursive;
 }
 
 /*==========Navbar==========*/
@@ -169,3 +184,49 @@ body {
     margin-left: 1rem;
     letter-spacing: .1rem;
 }
+
+/*==========Menu==========*/
+.menu {
+    height: 100vh;
+}
+.menu .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1rem;
+    margin: 1rem;
+}
+.menu .box-container .box {
+    border-radius: .5rem;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--shadow);
+}
+.menu .box-container .box img {
+    height: 7rem;
+}
+.menu .box-container .box .content {
+    margin-left: 1rem;
+}
+.menu .box-container .box .content h3 {
+    font-size: 1.4rem;
+    color: var(--color-blue);
+    padding-bottom: .5rem;
+}
+.menu .box-container .box .content .price {
+    font-size: 1.2rem;
+    color: var(--color-orange);
+}
+.menu .box-container .box .content .menu-btn {
+    background: var(--color-orange);
+    color: var(--color-white);
+    padding: .5rem 1rem;
+    font-size: .9rem;
+    border-radius: .2rem;
+    transition: all .5s ease;
+}
+.menu .box-container .box .content .menu-btn:hover {
+    background: var(--color-btn-menu);
+}
+
+
