@@ -16,7 +16,11 @@
     --color-background: #e44e2521;
     --color-gradient: linear-gradient(var(--color-background), var(--color-white));
     --color-btn-menu: #7FB77E;
-    --shadow: 0 0 1rem rgba(0, 0, 0, 0.144);
+    --color-gold: #ffd700;
+    --color-shadow: inset 10px 10px 1px rgba(248, 248, 248, 0.027), 
+    5px 10px 20px rgba(0, 0, 0, 0.014), 
+    5px 2px 1px rgba(255, 249, 249, 0), 
+    inset -10px -10px 15px rgba(255, 255, 255, 0.034);
 }
 
 /*==========Reset==========*/
@@ -167,8 +171,8 @@ body {
 }
 .about .content .icons .icon {
     border-radius: .5rem;
-    background: var(--color-white);
-    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.027);
+    box-shadow: var(--color-shadow);
     display: flex;
     align-items: center;
     flex: 1 1 20rem;
@@ -187,11 +191,12 @@ body {
 
 /*==========Menu==========*/
 .menu {
-    height: 100vh;
+    padding: 1.5rem;
+    margin-bottom: 10rem;
 }
 .menu .box-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 1rem;
     margin: 1rem;
 }
@@ -200,7 +205,8 @@ body {
     padding: 2rem;
     display: flex;
     align-items: center;
-    box-shadow: var(--shadow);
+    background: var(--color-background);
+    box-shadow: var(--color-shadow);
 }
 .menu .box-container .box img {
     height: 7rem;
@@ -229,4 +235,65 @@ body {
     background: var(--color-btn-menu);
 }
 
-
+/*==========Popular==========*/
+.popular {
+    margin-bottom: 10rem;
+    padding: 1.5rem;
+}
+.popular .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
+}
+.popular .box-container .box {
+    border-radius: .5rem;
+    position: relative;
+    background: var(--color-background);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--color-shadow);
+}
+.popular .box-container .box a .uil-heart-medical{
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    color: var(--color-red);
+    cursor: pointer;
+}
+.popular .box-container .box .image {
+    margin: 1rem 0;
+}
+.popular .box-container .box .image img {
+    height: 7rem;
+}
+.popular .box-container .box .content h3 {
+    font-size: 1.7rem;
+    color: var(--color-blue);
+}
+.popular .box-container .box .content .stars {
+    padding: 1rem 0;
+    font-size: 1rem;
+}
+.popular .box-container .box .content .stars i {
+    color: var(--color-gold);
+}
+.popular .box-container .box .content .stars span {
+    color: var(--color-text);
+}
+.popular .box-container .box .content .price {
+    font-size: 1rem;
+    color: var(--color-orange);
+}
+.popular .box-container .box .content .popupar-btn {
+    box-shadow: var(--color-shadow);
+    color: var(--color-black);
+    padding: .5rem .7rem;
+    font-size: .9rem;
+    letter-spacing: .1rem;
+    border-radius: .2rem;
+}
+.popular .box-container .box .content .popupar-btn:hover {
+    background: var(--color-btn-menu);
+    color: var(--color-white);
+}
