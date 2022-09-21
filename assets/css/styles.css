@@ -276,7 +276,7 @@ body {
 /*==========Menu==========*/
 .menu {
     padding: 1.5rem;
-    margin-bottom: 10rem;
+    margin: 15rem 0 2rem 0;
 }
 .menu .box-container {
     display: grid;
@@ -321,7 +321,7 @@ body {
 
 /*==========Popular==========*/
 .popular {
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
     padding: 1.5rem;
 }
 .popular .box-container {
@@ -483,5 +483,108 @@ body {
 .footer .footer-buttom .info span a:hover {
     color: var(--color-orange);
 }
+
+
+
+/*==========Media Query Tablet==========*/
+@media (max-width: 1024px) {
+    .home {
+        margin-top: 2rem;
+        text-align: center;
+    }
+    .home .content span {
+        font-size: 2rem;
+    }
+    .home .content h3 {
+        font-size: 1.7rem;
+    }
+    .home .content p {
+        font-size: 1rem;
+    }
+    .home .content .btn {
+        background: var(--color-blue);
+        color: var(--color-white);
+    }
+    .home .image .home-img {
+        width: 30%;
+    }
+    .about {
+       margin: 2rem;
+       padding-bottom: 5rem;
+       text-align: center;
+    }
+    .about .image img {
+        width: 40%;
+        margin-left: -3rem;
+    } 
+    .about .content span {
+        font-size: 2rem;
+    }
+    .about .content {
+       margin: 0 4rem;
+    }
+    .about .content .title {
+        font-size: 1.7rem;
+    }
+    .menu .heading span {
+        font-size: 2rem;
+    }
+    .menu .heading h3 {
+        font-size: 1.7rem;
+    }
+    .menu .box-container .box {
+        background: var(--color-white);
+    }
+    .popular {
+        padding: 0 2rem;
+    }
+    .popular .heading span {
+        font-size: 2rem;
+    }
+    .popular .heading h3 {
+        font-size: 1.7rem;
+    }
+    .popular .box-container .box{
+        background: var(--color-white);
+    }
+    .comments {
+        padding: 0 7rem;
+        margin: 0;
+    }
+    .comments .heading {
+        margin-bottom: -3rem;
+    }
+    .comments .heading span {
+        font-size: 2rem;
+    }
+    .comments .heading h3 {
+        font-size: 1.7rem;
+    }
+    .comments .box-container {
+        flex-direction: column;
+    }
+    .comments .box-container .box {
+        margin-bottom: 2rem;
+    }
+    .footer .box-container .box-social {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 7rem;
+    }
+    .footer .box-container .box h3, .footer .box-container .footer-box h3, .footer .box-container .box-social h3 {
+        font-size: .9rem;
+    }
+    .footer .box-container .box a, .footer .box-container .footer-box p {
+        font-size: .8rem;
+    }
+    .footer-buttom .info {
+        font-size: .9rem;
+    }
+
+}
+
+
+/*==========Media Query Mobile==========*/
 
 
