@@ -1,7 +1,7 @@
 const header = document.querySelector('.navbar')
 const openNavBtn = document.querySelector('#nav-open')
 const closeNavBtn = document.querySelector('#nav-close')
-const navLink = document.querySelector('.navbar')
+const navLink = document.querySelector('.nav-links')
 
 const openNav = () => {
     header.style.display = 'flex'
@@ -17,4 +17,5 @@ const closeNav = () => {
 }
 closeNavBtn.addEventListener('click', closeNav)
 
-navLink.addEventListener('click', closeNav)
+
+
