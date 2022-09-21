@@ -22,8 +22,6 @@
     5px 2px 1px rgba(255, 249, 249, 0), 
     inset -10px -10px 15px rgba(255, 255, 255, 0.034);
     --color-box: #ffd9000e;
-    --color-whatsapp: #3FBA50;
-    --color-telegram: #2B9DCD;
 }
 
 /*==========Reset==========*/
@@ -86,7 +84,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.3rem 9%;
+    padding: 1.3rem 3rem;
 }
 .header .logo {
     font-family: cursive;
@@ -106,19 +104,57 @@ body {
 .header .navbar .active {
     color: var(--color-orange);
 }
-.header .nav-icons .icons {
-    font-size: 1.5rem;
-    letter-spacing: .5rem;
-    cursor: pointer;
-}
-.header .nav-icons .menu-btn {
+.header .menu-btn {
     display: none;
 }
-.header .nav-icons .icons .uil-whatsapp-alt {
-    color: var(--color-whatsapp);
-}
-.header .nav-icons .icons .uil-telegram {
-    color: var(--color-telegram);
+
+/*==========Media Query Navbar==========*/
+@media (max-width: 1024px) {
+    .header .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        perspective: 350px;
+    }
+    .header .navbar a {
+        width: 100%;
+        background: var(--color-white);
+        border-bottom: 1px solid var(--color-orange);
+    }
+
+    /*==========Animação==========*/
+    .header .navbar a {
+        transform: rotate(-90deg) rotateY(90deg);
+        transform-origin: top right;
+        animation: animacao 1s ease forwards;
+        opacity: 0;
+    }
+    @keyframes animacao {
+        to {
+            transform: rotate(0);
+            opacity: 1;
+        }
+    }
+
+    .header .navbar a {
+        height: 3.5rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 3rem 0 2rem;
+    }
+    .header .menu-btn {
+        display: inline-block;
+        font-size: 1.7rem;
+        border: none;
+        cursor: pointer;
+    }
+    #nav-close {
+        display: none;
+    }
+
 }
 
 /*==========Home==========*/
@@ -447,3 +483,5 @@ body {
 .footer .footer-buttom .info span a:hover {
     color: var(--color-orange);
 }
+
+
