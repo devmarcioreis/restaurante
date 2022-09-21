@@ -350,3 +350,53 @@ body {
 }
 
 /*==========Footer==========*/
+.footer {
+    background: var(--color-background);
+    padding: 2rem;
+}
+.footer .box-container {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    gap: 1.5rem;
+}
+.footer .box-container .box {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.footer .box-container .box a {
+    color: var(--color-text);
+}
+.footer .box-container .box a:hover {
+    color: var(--color-orange);
+}
+.footer .box-container .box h3, .footer .box-container .footer-box h3, .footer .box-container .box-social h3 {
+    font-size: 1.1rem;
+    color: var(--color-blue);
+    padding: 1rem 0;
+}
+.footer .box-container .box-social i {
+    letter-spacing: 1rem;
+    font-size: 1.5rem;
+    color: var(--color-orange);
+    transition: all .5s ease;
+}
+.footer .box-container .box-social i:hover {
+    color: var(--color-blue);
+}
+.footer .box-container .footer-box p {
+    margin-bottom: .5rem;
+    color: var(--color-text);
+}
+.footer .box-container .footer-box p span {
+    font-weight: bold;
+}
+.footer .footer-buttom .info {
+    padding: 4rem 0 0 0;
+    text-align: center;
+    color: var(--color-text);
+}
+.footer .footer-buttom .info span a:hover {
+    color: var(--color-orange);
+}
