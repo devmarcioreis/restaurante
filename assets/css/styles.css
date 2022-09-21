@@ -206,8 +206,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 2rem;
-    height: 100vh;
+    gap: 1.5rem;
+    overflow: hidden;
 }
 .about .image {
   flex: 1 1 40rem;
@@ -276,7 +276,8 @@ body {
 /*==========Menu==========*/
 .menu {
     padding: 1.5rem;
-    margin: 15rem 0 2rem 0;
+    margin: 10rem 4rem;
+    overflow: hidden;
 }
 .menu .box-container {
     display: grid;
@@ -321,8 +322,8 @@ body {
 
 /*==========Popular==========*/
 .popular {
-    margin-bottom: 5rem;
     padding: 1.5rem;
+    overflow: hidden;
 }
 .popular .box-container {
     display: grid;
@@ -384,26 +385,25 @@ body {
 
 /*==========Comments==========*/
 .comments {
-    margin-bottom: 10rem;
+    margin: 5rem 4rem;
+    overflow: hidden;
 }
 .comments .box-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1.5rem;
-    padding: 4rem;
+    gap: 5rem;
+    padding: 2rem;
 }
 .comments .box-container .box {
-    overflow: hidden;
-    margin: auto;
     border-top-left-radius: 5rem;
     border-bottom-right-radius: 5rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.137);
+    width: 20rem;
 }
 .comments .box-container .box .image {
     position: relative;
-    height: 20rem;
-    overflow: hidden;
+    height: 100%;
     width: 100%;
 }
 .comments .box-container .box .image img {
@@ -434,8 +434,10 @@ body {
 
 /*==========Footer==========*/
 .footer {
-    background: var(--color-background);
+    margin: 0rem;
+    width: 100vw;
     padding: 2rem;
+    overflow: hidden;
 }
 .footer .box-container {
     display: flex;
@@ -489,7 +491,7 @@ body {
 /*==========Media Query Tablet==========*/
 @media (max-width: 1024px) {
     .home {
-        margin-top: 2rem;
+        margin-top: 1rem;
         text-align: center;
     }
     .home .content span {
@@ -510,7 +512,6 @@ body {
     }
     .about {
        margin: 2rem;
-       padding-bottom: 5rem;
        text-align: center;
     }
     .about .image img {
@@ -525,6 +526,9 @@ body {
     }
     .about .content .title {
         font-size: 1.7rem;
+    }
+    .menu {
+        margin: 0 4rem;
     }
     .menu .heading span {
         font-size: 2rem;
@@ -547,12 +551,8 @@ body {
     .popular .box-container .box{
         background: var(--color-white);
     }
-    .comments {
-        padding: 0 7rem;
-        margin: 0;
-    }
     .comments .heading {
-        margin-bottom: -3rem;
+        margin-bottom: -1rem;
     }
     .comments .heading span {
         font-size: 2rem;
@@ -562,9 +562,6 @@ body {
     }
     .comments .box-container {
         flex-direction: column;
-    }
-    .comments .box-container .box {
-        margin-bottom: 2rem;
     }
     .footer .box-container .box-social {
         display: flex;
@@ -586,5 +583,93 @@ body {
 
 
 /*==========Media Query Mobile==========*/
+@media (max-width: 768px) {
+    .home {
+        width: 100%;
+        margin-left: 2rem;
+        padding: 1rem 1.5rem;
+    }
+    .home .content span {
+        font-size: 2rem;
+    }
+    .home .image .home-img {
+        width: 60%;
+        margin-top: 2rem;
+    }
+    .about {
+        width: 100%;
+        padding: 4rem 1.5rem;
+    }
+    .about .image img {
+        width: 100%;
+        margin-right: 2rem;
+    }
+    .about .content {
+        margin: 0;
+    }
+    .menu {
+        margin-top: -2rem;
+        margin-left: .5rem;
+        width: 100%;
+    }
+    .menu .heading span {
+        font-size: 2rem;
+    }
+    .menu .heading h3 {
+        font-size: 1.5rem;
+    }
+    .menu .box-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin: 0;
+    }
+    .menu .box-container .box {
+        width: 22rem;
+    }
+    .menu .box-container .box img {
+        width: 60%;
+    }
+    .popular {
+        padding: 2.5rem;
+    }
+    .popular .heading span {
+        font-size: 2rem;
+    }
+    .popular .heading h3 {
+        font-size: 1.5rem;
+    }
+    .comments {
+        margin: auto;
+        margin-left: 2rem;
+    }
+    .comments .box-container {
+        padding: 2rem;
+    }
+    .comments .box-container .box {
+        width: 100%;
+    }
+    .comments .heading span {
+        font-size: 2rem;
+    }
+    .comments .heading h3 {
+        font-size: 1.4rem;
+    }
+    .footer {
+        margin-left: 1rem;
+    }
+    .footer .box-container {
+        flex-direction: column;
+    }
+    .footer .box-container .box-social {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: .4rem;
+        width: 100%;
+        margin-left: .5rem;
+    }
 
+
+
+}
 
