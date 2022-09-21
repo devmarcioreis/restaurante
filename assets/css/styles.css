@@ -22,6 +22,8 @@
     5px 2px 1px rgba(255, 249, 249, 0), 
     inset -10px -10px 15px rgba(255, 255, 255, 0.034);
     --color-box: #ffd9000e;
+    --color-whatsapp: #3FBA50;
+    --color-telegram: #2B9DCD;
 }
 
 /*==========Reset==========*/
@@ -72,7 +74,52 @@ body {
     font-family: cursive;
 }
 
-/*==========Navbar==========*/
+/*==========Header==========*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: var(--color-white);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.3rem 9%;
+}
+.header .logo {
+    font-family: cursive;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-orange);
+}
+.header .navbar a {
+    font-size: 1.1rem;
+    margin: 0 1rem;
+    color: var(--color-text);
+    transition: all .5s ease;
+}
+.header .navbar a:hover {
+    color: var(--color-orange);
+}
+.header .navbar .active {
+    color: var(--color-orange);
+}
+.header .nav-icons .icons {
+    font-size: 1.5rem;
+    letter-spacing: .5rem;
+    cursor: pointer;
+}
+.header .nav-icons .menu-btn {
+    display: none;
+}
+.header .nav-icons .icons .uil-whatsapp-alt {
+    color: var(--color-whatsapp);
+}
+.header .nav-icons .icons .uil-telegram {
+    color: var(--color-telegram);
+}
 
 /*==========Home==========*/
 .home {
